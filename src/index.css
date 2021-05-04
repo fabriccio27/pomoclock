@@ -1,0 +1,44 @@
+html, body, h1 {
+  margin:0;
+  color:white;
+}
+#root {
+  height:100vh;
+  background-color:darkgreen;
+  text-align:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.timer-buttons, .inc-dec-btn {
+  margin:1.5rem;
+  background-color:transparent;
+  border:none;
+  color:white;
+}
+.fas{
+  font-size:1.5rem;
+}
+
+.inc-dec-btn {
+
+  font-size:1.8rem;
+  margin-top:0.3rem;
+}
+.period-label {
+  margin:1rem;
+  font-weight:thinner;
+  font-size:1.2rem;
+}
+.timer-box {
+  border:4px solid floralwhite;
+  border-radius:4rem;
+}
+.modifiers-label{
+  margin:2rem 0 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
