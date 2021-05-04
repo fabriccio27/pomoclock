@@ -173,7 +173,9 @@ class App extends React.Component {
               <button className="timer-buttons" onClick={this.timerControl} id="start_stop"><i class="fas fa-play"></i><i class="fas fa-pause"></i></button>
               <button className="timer-buttons" onClick={this.handleReset} id="reset"><i class="fas fa-redo-alt"></i></button>
             </div>
+
           </div>
+          <p style={{width:"100%"}}><small>designed by fabricio</small></p>
         </div>
 
       </div>
@@ -187,7 +189,7 @@ class App extends React.Component {
 
 
 class TimeSetter extends React.Component {
-  
+
   handleDec=()=>{
     this.props.decMinutes(this.props.periodLabel)
   }
