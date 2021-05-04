@@ -36,14 +36,14 @@ class App extends React.Component {
     return `${mins}:${secs}`;
   }
   decrementMinutes(targetPeriod){
-    if(!this.state.running && this.state.timerId==0){
-      if (targetPeriod=="break" && this.state.breakMinutes>1){
+    if(!this.state.running && this.state.timerId===0){
+      if (targetPeriod==="break" && this.state.breakMinutes>1){
         console.log("clicked to dec break minutes");
         this.setState(state=>{
           return {breakMinutes:state.breakMinutes-1};
         })
       }
-      if (targetPeriod=="session" && this.state.sessionMinutes>1){
+      if (targetPeriod==="session" && this.state.sessionMinutes>1){
         console.log("clicked to dec session minutes");
         this.setState(state=>{
           return {sessionMinutes:state.sessionMinutes-1};
@@ -56,14 +56,14 @@ class App extends React.Component {
     }
   }
   incrementMinutes(targetPeriod){
-    if(!this.state.running && this.state.timerId==0){
-      if (targetPeriod=="break" && this.state.breakMinutes<60){
+    if(!this.state.running && this.state.timerId===0){
+      if (targetPeriod==="break" && this.state.breakMinutes<60){
          console.log("clicked to inc break minutes");
          this.setState(state=>{
            return {breakMinutes:state.breakMinutes+1};
          })
        }
-      if (targetPeriod=="session" && this.state.sessionMinutes<60){
+      if (targetPeriod==="session" && this.state.sessionMinutes<60){
         console.log("clicked to inc session minutes");
         this.setState(state=>{
           return {sessionMinutes:state.sessionMinutes+1};
@@ -111,7 +111,7 @@ class App extends React.Component {
     this.listenLastFive(timer)
     if (timer<0) {
       console.log("entered the periodControl conditionals");
-      if (this.state.timerId!=0) {
+      if (this.state.timerId!==0) {
         clearInterval(this.state.timerId);
       }
       if (this.state.actualPeriod === 'session') {
@@ -131,7 +131,7 @@ class App extends React.Component {
     }
   }
   listenLastFive(secs){
-    if (secs==0){
+    if (secs===0){
       console.log("reached 00:00");
       let beepAudio = document.querySelector("#beep");
       beepAudio.play();
